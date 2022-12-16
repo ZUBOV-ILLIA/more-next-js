@@ -7,8 +7,6 @@ import Link from "next/link";
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
 
-    console.log(allPostsData, '<== getStaticProps')
-
     // if data undefined go to 404page
     if (!allPostsData) {
         return {
@@ -25,8 +23,6 @@ export async function getStaticProps() {
 
 
 export default function Home({allPostsData}) {
-    console.log(allPostsData, '<---Home')
-
     return (
         <Layout home>
             <Head>
@@ -43,6 +39,15 @@ export default function Home({allPostsData}) {
                     <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
                 </p>
             </section>
+
+            <Link href="posts/1"><p className={utilStyles['list-of-users']}>go to user 1</p></Link>
+            <Link href="posts/2"><p className={utilStyles['list-of-users']}>go to user 2</p></Link>
+            <Link href="posts/3"><p className={utilStyles['list-of-users']}>go to user 3</p></Link>
+            <Link href="posts/4"><p className={utilStyles['list-of-users']}>go to user 4</p></Link>
+            <Link href="posts/5"><p className={utilStyles['list-of-users']}>go to user 5</p></Link>
+            <Link href="posts/6"><p className={utilStyles['list-of-users']}>go to user 6</p></Link>
+            <Link href="posts/7"><p className={utilStyles['list-of-users']}>go to user 7</p></Link>
+            <Link href="posts/8"><p className={utilStyles['list-of-users']}>go to user 8</p></Link>
 
             <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
                 <h2 className={utilStyles.headingLg}>Blog</h2>

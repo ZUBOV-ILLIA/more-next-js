@@ -50,3 +50,9 @@
 .lightText {
   color: #666;
 }
+
+.list-of-users {
+  margin: 0;
+  color: red;
+}
+
